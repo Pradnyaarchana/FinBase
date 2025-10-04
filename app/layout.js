@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "sonner";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-        <ClerkProvider>
+  <ClerkProvider>
 
     <html lang="en">
       <body
@@ -24,6 +26,7 @@ export default function RootLayout({ children }) {
           <main className="bg-blue-50 text-black p-4 min-h-screen">
               {children} 
           </main>
+          <Toaster richColors/>
       
         {/*footer*/}
         <footer className="bg-blue-50 text-black p-4 text-center">

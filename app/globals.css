@@ -120,3 +120,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities{
+
+  .gradient{
+    @apply bg-gradient-to-br from-red-600 to-pink-800;
+  }
+  .gradient-title{
+    background-image: linear-gradient(to bottom right, #1a46d7, #db2777); /* from-blue-600 to-pink-800 */
+    font-weight: 800; /* font-extrabold */
+    letter-spacing: -0.05em; /* tracking-tighter */
+    padding-right: 0.5rem; /* pr-2 */
+    padding-bottom: 0.5rem; /* pb-2 */
+    color: transparent; /* text-transparent */
+    -webkit-background-clip: text;
+    background-clip: text; /* bg-clip-text */
+
+  }
+}
